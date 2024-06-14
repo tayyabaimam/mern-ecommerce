@@ -1,0 +1,6 @@
+[submodule "eCommence-Frontend"]
+	path = eCommence-Frontend
+	url = https://github.com/ArhamNaeem/eCommence-Frontend
+[submodule "eCommerce-Backend"]
+	path = eCommerce-Backend
+	url = https://github.com/ArhamNaeem/eCommerce-Backend

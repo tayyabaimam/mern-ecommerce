@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./eCommerce-Backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/Cluster0
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./eCommence-Frontend
+    ports:
+      - "3000:443"
+    depends_on:
+      - backend
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
